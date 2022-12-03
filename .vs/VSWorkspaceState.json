@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Software-Engineering-Project"
+    "\\Software-Engineering-Project",
+    "\\Software-Engineering-Project\\Software-Engineering-Project",
+    "\\Software-Engineering-Project\\Software-Engineering-Project\\Controllers",
+    "\\Software-Engineering-Project\\Software-Engineering-Project\\Views",
+    "\\Software-Engineering-Project\\Software-Engineering-Project\\Views\\Student"
   ],
-  "SelectedNode": "\\Software-Engineering-Project\\Software-Engineering-Project.sln",
+  "SelectedNode": "\\Software-Engineering-Project\\Software-Engineering-Project\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
