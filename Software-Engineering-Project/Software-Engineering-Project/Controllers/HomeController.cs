@@ -14,7 +14,6 @@ namespace Software_Engineering_Project.Controllers
         //GET
         public IActionResult Login()
         {
-
             return View();
         }
 

@@ -5,23 +5,21 @@ using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-/*
 builder.Services.Configure<KestrelServerOptions>(options =>
 {
     options.ConfigureHttpsDefaults(options =>
         options.ClientCertificateMode = ClientCertificateMode.RequireCertificate);
 });
 
- builder.Services.AddAuthentication(
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+builder.Services.AddAuthentication(
         CertificateAuthenticationDefaults.AuthenticationScheme)
     .AddCertificate(options =>
     {
+        
         options.AllowedCertificateTypes = CertificateTypes.All;
-    }); */
-
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-
+    });
 var app = builder.Build();
 
 app.UseAuthentication();
