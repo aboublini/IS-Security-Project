@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
 using Npgsql;
 using Software_Engineering_Project.Models;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
+using System.Security.Claims;
 
 namespace Software_Engineering_Project.Controllers
 {
@@ -40,6 +43,21 @@ namespace Software_Engineering_Project.Controllers
                 {
                     if(role == "professor")
                     {
+                        //Creating and populating the identity cookie with data
+                        var claims = new List<Claim>
+                        {
+                            new Claim(ClaimTypes.Name, username),
+                            new Claim(ClaimTypes.Role, role)
+                        };
+
+                        var claimsIdentity = new ClaimsIdentity(
+                            claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                        
+                        //Sending the cookie to the clients machine
+                        HttpContext.SignInAsync(
+                            CookieAuthenticationDefaults.AuthenticationScheme,
+                            new ClaimsPrincipal(claimsIdentity));
+                        
                         ViewBag.Username = model.Username;
                         return View("~/Views/Teacher/TeacherHome.cshtml", model);
                     }
@@ -51,6 +69,23 @@ namespace Software_Engineering_Project.Controllers
                         if (new_reader.Read())
                         {
                             bool has_connected = new_reader.GetBoolean(0);
+
+                            //Creating and populating the identity cookie with data
+                            var claims = new List<Claim>
+                        {
+                            new Claim(ClaimTypes.Name, username),
+                            new Claim(ClaimTypes.Role, role)
+                        };
+
+                            var claimsIdentity = new ClaimsIdentity(
+                                claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                            //Sending the cookie to the clients machine
+                            HttpContext.SignInAsync(
+                                CookieAuthenticationDefaults.AuthenticationScheme,
+                                new ClaimsPrincipal(claimsIdentity));
+
+
                             if (has_connected) 
                             {
                                 ViewBag.Username = model.Username;
@@ -68,5 +103,14 @@ namespace Software_Engineering_Project.Controllers
             model.IsLoginConfirmed = false;
             return View("Login", model);
         }
+
+        public IActionResult Logout()
+        {
+            HttpContext.SignOutAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme);
+
+            return RedirectToAction("Login");
+        }
+
     }
 }

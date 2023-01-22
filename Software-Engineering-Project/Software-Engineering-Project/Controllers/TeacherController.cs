@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Npgsql;
 using Software_Engineering_Project.Models;
 
 namespace Software_Engineering_Project.Controllers
 {
+    [Authorize(Roles = "professor")]
     public class TeacherController : Controller
     {
         public IActionResult TeacherHome(string username)

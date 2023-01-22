@@ -1,0 +1,469 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Software-Engineering-Project.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Software-Engineering-Project.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\AddMeetingStyle.css",
+      "PackagePath": "staticwebassets\\css\\AddMeetingStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\AddStudentStyle.css",
+      "PackagePath": "staticwebassets\\css\\AddStudentStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\GradeListStyle.css",
+      "PackagePath": "staticwebassets\\css\\GradeListStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\GradeStyle.css",
+      "PackagePath": "staticwebassets\\css\\GradeStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\Meeting_style.css",
+      "PackagePath": "staticwebassets\\css\\Meeting_style.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\NavbarStyle.css",
+      "PackagePath": "staticwebassets\\css\\NavbarStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\SetPassword_style.css",
+      "PackagePath": "staticwebassets\\css\\SetPassword_style.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\StudentHandlerStyle.css",
+      "PackagePath": "staticwebassets\\css\\StudentHandlerStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\StudentHome_Style.css",
+      "PackagePath": "staticwebassets\\css\\StudentHome_Style.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\StudentProfile.css",
+      "PackagePath": "staticwebassets\\css\\StudentProfile.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\StudentSearchStyle.css",
+      "PackagePath": "staticwebassets\\css\\StudentSearchStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\TeacheProfileStyle.css",
+      "PackagePath": "staticwebassets\\css\\TeacheProfileStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\TeacherHome_style.css",
+      "PackagePath": "staticwebassets\\css\\TeacherHome_style.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\ThesisStartListStyle.css",
+      "PackagePath": "staticwebassets\\css\\ThesisStartListStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\ThesisStatusStyle.css",
+      "PackagePath": "staticwebassets\\css\\ThesisStatusStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\UngradedStyle.css",
+      "PackagePath": "staticwebassets\\css\\UngradedStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\UpdateStyle.css",
+      "PackagePath": "staticwebassets\\css\\UpdateStyle.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\login_style.css",
+      "PackagePath": "staticwebassets\\css\\login_style.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\Meeting_img.png",
+      "PackagePath": "staticwebassets\\images\\Meeting_img.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\StudentHandler_img.png",
+      "PackagePath": "staticwebassets\\images\\StudentHandler_img.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\StudentHome_image.png",
+      "PackagePath": "staticwebassets\\images\\StudentHome_image.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\TeacherHome_img.png",
+      "PackagePath": "staticwebassets\\images\\TeacherHome_img.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\add_student_img.png",
+      "PackagePath": "staticwebassets\\images\\add_student_img.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\check.png",
+      "PackagePath": "staticwebassets\\images\\check.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\grade_img.png",
+      "PackagePath": "staticwebassets\\images\\grade_img.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\hat.png",
+      "PackagePath": "staticwebassets\\images\\hat.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\lock.png",
+      "PackagePath": "staticwebassets\\images\\lock.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\lock_yellow.png",
+      "PackagePath": "staticwebassets\\images\\lock_yellow.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\login_img.png",
+      "PackagePath": "staticwebassets\\images\\login_img.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\one.png",
+      "PackagePath": "staticwebassets\\images\\one.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\profile_img.png",
+      "PackagePath": "staticwebassets\\images\\profile_img.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\profile_picture.png",
+      "PackagePath": "staticwebassets\\images\\profile_picture.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\report.png",
+      "PackagePath": "staticwebassets\\images\\report.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\search.png",
+      "PackagePath": "staticwebassets\\images\\search.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\small_logo.png",
+      "PackagePath": "staticwebassets\\images\\small_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\three.png",
+      "PackagePath": "staticwebassets\\images\\three.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\two.png",
+      "PackagePath": "staticwebassets\\images\\two.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\ungraded.png",
+      "PackagePath": "staticwebassets\\images\\ungraded.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\ungraded_list.png",
+      "PackagePath": "staticwebassets\\images\\ungraded_list.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\unipi_logo.png",
+      "PackagePath": "staticwebassets\\images\\unipi_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\upload.png",
+      "PackagePath": "staticwebassets\\images\\upload.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\images\\user.png",
+      "PackagePath": "staticwebassets\\images\\user.png"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\js\\AddMeetingFail.js",
+      "PackagePath": "staticwebassets\\js\\AddMeetingFail.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\js\\AddMeetingSuccess.js",
+      "PackagePath": "staticwebassets\\js\\AddMeetingSuccess.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\js\\AddStudentFail.js",
+      "PackagePath": "staticwebassets\\js\\AddStudentFail.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\js\\AddStudentSuccess.js",
+      "PackagePath": "staticwebassets\\js\\AddStudentSuccess.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\js\\BurgerMenu.js",
+      "PackagePath": "staticwebassets\\js\\BurgerMenu.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\js\\LoginFailed.js",
+      "PackagePath": "staticwebassets\\js\\LoginFailed.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\js\\Meeting.js",
+      "PackagePath": "staticwebassets\\js\\Meeting.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\js\\MeetingStudent.js",
+      "PackagePath": "staticwebassets\\js\\MeetingStudent.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\js\\popup.js",
+      "PackagePath": "staticwebassets\\js\\popup.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Ioake\\IS-Security-Project\\Software-Engineering-Project\\Software-Engineering-Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Software-Engineering-Project.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Software-Engineering-Project.props",
+      "PackagePath": "build\\Software-Engineering-Project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Software-Engineering-Project.props",
+      "PackagePath": "buildMultiTargeting\\Software-Engineering-Project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Software-Engineering-Project.props",
+      "PackagePath": "buildTransitive\\Software-Engineering-Project.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
