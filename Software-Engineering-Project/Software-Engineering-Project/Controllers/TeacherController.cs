@@ -66,26 +66,30 @@ namespace Software_Engineering_Project.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AddStudent(ThesisModel model, string proffesorName)
         {
-            System.Console.Out.WriteLine(model.ThesisStartDate);
             model.Professor = proffesorName;
             if (ModelState.IsValid)
             {
+                string hash = Database.Database.HashPasword(model.Password, out var salt);
                 NpgsqlConnection conn = Database.Database.GetConnection();
                 int result = Database.Database.ExecuteUpdate(String.Format("insert into users (username , password,first_name,last_name" +
                     ",gender,email,phone,role) values ('{0}','{1}','{2}','{3}','{4}','{5}',{6},'{7}');" +
                     " insert into student (student , start_year, professor) values ('{8}', {9}, '{10}');" +
                     " insert into thesis (professor, student, title, thesis_start_date, grade, language, technology) " +
                     "values ('{11}', '{12}', '{13}', '{14}', -1, '{15}', '{16}');",
-                    model.Username, model.Password, model.FirstName, model.LastName, model.Gender, model.Email, model.Phone,
+                    model.Username, hash, model.FirstName, model.LastName, model.Gender, model.Email, model.Phone,
                     model.Role, model.Username, model.StartYear, model.Professor, model.Professor, model.Username, model.Title, model.ThesisStartDate, model.Language, model.Technology), conn);
-                if (result != 0)
-                {
                     conn.Close();
+
+                int saltResult = Database.Database.ExecuteUpdate(String.Format("update users set salt=@salt " +
+                        " where username='{0}'", model.Username), conn, salt);
+                conn.Close();
+
+                if (result != 0 && saltResult != 0)
+                {
                     ViewBag.Success = true;
                     ViewBag.Username = proffesorName;
                     return View();
                 }
-                conn.Close();
             }
             ViewBag.Username = proffesorName;
             ViewBag.Success = false;
@@ -272,18 +276,20 @@ namespace Software_Engineering_Project.Controllers
             ViewBag.failure = 0;
             ViewBag.emptyPassword = 0;
 
-            string dbPassword = "";
+            string hash = "";
+            byte[] salt = new byte[64];
 
             NpgsqlConnection conn = Database.Database.GetConnection();
-            NpgsqlDataReader reader = Database.Database.ExecuteQuery(String.Format("select username, password " +
+            NpgsqlDataReader reader = Database.Database.ExecuteQuery(String.Format("select username, password, salt " +
                                                         "from users where username='{0}'", professorName), conn);
             while (reader.Read())
             {
-                dbPassword = reader.GetString(1);
+                hash = reader.GetString(1);
+                reader.GetBytes(2, 0, salt, 0, 64);
             }
             conn.Close();
 
-            if (dbPassword != oldPassword)
+            if (!Database.Database.VerifyPassword(oldPassword, hash, salt))
             {
                 ViewBag.wrongPassword = 1;
             }
@@ -300,8 +306,13 @@ namespace Software_Engineering_Project.Controllers
                 else
                 {
                     int result = Database.Database.ExecuteUpdate(String.Format("update users set password='{0}'" +
-                        " where username='{1}'", newPassword.Trim(), professorName), conn);
-                    if (result == 1)
+                        " where username='{1}'", Database.Database.HashPasword(newPassword.Trim(), out var newSalt), professorName), conn);
+                    conn.Close();
+
+                    int saltResult = Database.Database.ExecuteUpdate(String.Format("update users set salt=@salt " +
+                        " where username='{0}'", professorName), conn, newSalt);
+
+                    if (result == 1 && saltResult == 1)
                     {
                         ViewBag.success = 1;
                     }

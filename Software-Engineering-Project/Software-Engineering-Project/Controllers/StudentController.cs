@@ -145,18 +145,20 @@ namespace Software_Engineering_Project.Controllers
             ViewBag.failure = 0;
             ViewBag.emptyPassword = 0;
 
-            string dbPassword = "";
+            string hash = "";
+            byte[] salt = new byte[64];
 
             NpgsqlConnection conn = Database.Database.GetConnection();
-            NpgsqlDataReader reader = Database.Database.ExecuteQuery(String.Format("select username, password " +
+            NpgsqlDataReader reader = Database.Database.ExecuteQuery(String.Format("select username, password, salt " +
                                                         "from users where username='{0}'", Username), conn);
             while (reader.Read())
             {
-                dbPassword = reader.GetString(1);
+                hash = reader.GetString(1);
+                reader.GetBytes(2, 0, salt, 0, 64);
             }
             conn.Close();
 
-            if (dbPassword != oldPassword)
+            if (!Database.Database.VerifyPassword(oldPassword, hash, salt))
             {
                 ViewBag.wrongPassword = 1;
             }
@@ -173,8 +175,13 @@ namespace Software_Engineering_Project.Controllers
                 else
                 {
                     int result = Database.Database.ExecuteUpdate(String.Format("update users set password='{0}'" +
-                        " where username='{1}'", newPassword.Trim(), Username), conn);
-                    if (result == 1)
+                        " where username='{1}'", Database.Database.HashPasword(newPassword.Trim(), out var newSalt), Username), conn);
+                    conn.Close();
+
+                    int saltResult = Database.Database.ExecuteUpdate(String.Format("update users set salt=@salt " +
+                        " where username='{0}'", Username), conn, newSalt);
+
+                    if (result == 1 && saltResult == 1)
                     {
                         ViewBag.success = 1;
                     }
@@ -263,18 +270,20 @@ namespace Software_Engineering_Project.Controllers
             ViewBag.failure = 0;
             ViewBag.emptyPassword = 0;
 
-            string dbPassword = "";
+            string hash = "";
+            byte[] salt = new byte[64];
 
             NpgsqlConnection conn = Database.Database.GetConnection();
-            NpgsqlDataReader reader = Database.Database.ExecuteQuery(String.Format("select username, password " +
+            NpgsqlDataReader reader = Database.Database.ExecuteQuery(String.Format("select username, password, salt " +
                                                         "from users where username='{0}'", Username), conn);
             while (reader.Read())
             {
-                dbPassword = reader.GetString(1);
+                hash = reader.GetString(1);
+                reader.GetBytes(2, 0, salt, 0, 64);
             }
             conn.Close();
 
-            if (dbPassword != oldPassword)
+            if (!Database.Database.VerifyPassword(oldPassword, hash, salt))
             {
                 ViewBag.wrongPassword = 1;
             }
@@ -291,14 +300,19 @@ namespace Software_Engineering_Project.Controllers
                 else
                 {
                     int result = Database.Database.ExecuteUpdate(String.Format("update users set password='{0}'" +
-                        " where username='{1}'", newPassword.Trim(), Username), conn);
-                    conn.Close();
-                    NpgsqlConnection conn1 = Database.Database.GetConnection();
-                    int result1 = Database.Database.ExecuteUpdate(String.Format("update student set has_ever_connected='true'" +
-                        " where student='{1}'", newPassword.Trim(), Username), conn1);
+                        " where username='{1}'", Database.Database.HashPasword(newPassword.Trim(), out var newSalt), Username), conn);
                     conn.Close();
 
-                    if (result == 1 && result1 ==1)
+                    int saltResult = Database.Database.ExecuteUpdate(String.Format("update users set salt=@salt " +
+                        " where username='{0}'", Username), conn, newSalt);
+                    conn.Close();
+
+                    NpgsqlConnection conn1 = Database.Database.GetConnection();
+                    int result1 = Database.Database.ExecuteUpdate(String.Format("update student set has_ever_connected='true'" +
+                        " where student='{0}'", Username), conn1);
+                    conn.Close();
+
+                    if (result == 1 && result1 == 1 && saltResult == 1)
                     {
                         ViewBag.Username = Username;
                         return View("StudentHome", Username);

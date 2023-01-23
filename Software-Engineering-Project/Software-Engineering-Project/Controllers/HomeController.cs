@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
 using System.Security.Claims;
+using System.Text;
 
 namespace Software_Engineering_Project.Controllers
 {
@@ -30,16 +31,18 @@ namespace Software_Engineering_Project.Controllers
 
             NpgsqlConnection conn = Database.Database.GetConnection();
             NpgsqlDataReader reader = Database.Database.ExecuteQuery(String.Format("select username" +
-                ", password , role from users where username = '{0}'", username),conn);
+                ", password , role, salt from users where username = '{0}'", username),conn);
 
             if (reader.Read())
             {
-                string dbPassword = reader.GetString(1);
+                byte[] salt = new byte[64];
+                string hash = reader.GetString(1);
                 string role = reader.GetString(2);
+                reader.GetBytes(3, 0, salt, 0, 64);
 
                 conn.Close();
 
-                if (dbPassword == password)
+                if (Database.Database.VerifyPassword(password,hash, salt))
                 {
                     if(role == "professor")
                     {
