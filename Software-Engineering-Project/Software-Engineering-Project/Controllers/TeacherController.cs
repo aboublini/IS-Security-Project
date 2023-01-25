@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Npgsql;
 using Software_Engineering_Project.Models;
+using System.Text.RegularExpressions;
 
 namespace Software_Engineering_Project.Controllers
 {
@@ -241,7 +242,7 @@ namespace Software_Engineering_Project.Controllers
         //GET
         public IActionResult Profile(string username)
         {
-            ProfessorModel model = new ProfessorModel();
+            ProfessorProfileModel model = new();
 
             NpgsqlConnection conn = Database.Database.GetConnection();
 
@@ -268,100 +269,124 @@ namespace Software_Engineering_Project.Controllers
         //POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult ChangePassword(string oldPassword, string newPassword, string newPassword1, string professorName)
+        public IActionResult ChangePassword(ProfessorProfileModel profileModel)
         {
+            string professorName = profileModel.Username;
             ViewBag.wrongPassword = 0;
             ViewBag.notSamePasswords = 0;
             ViewBag.success = 0;
             ViewBag.failure = 0;
             ViewBag.emptyPassword = 0;
 
-            string hash = "";
-            byte[] salt = new byte[64];
 
-            NpgsqlConnection conn = Database.Database.GetConnection();
-            NpgsqlDataReader reader = Database.Database.ExecuteQuery(String.Format("select username, password, salt " +
-                                                        "from users where username='{0}'", professorName), conn);
-            while (reader.Read())
+            if (!ModelState.IsValid)
             {
-                hash = reader.GetString(1);
-                reader.GetBytes(2, 0, salt, 0, 64);
-            }
-            conn.Close();
+                ProfessorProfileModel model = new();
 
-            if (!Database.Database.VerifyPassword(oldPassword, hash, salt))
-            {
-                ViewBag.wrongPassword = 1;
-            }
-            else if (newPassword == null || newPassword == "" || newPassword.Length == newPassword.Count(f => (f == (char)32)))
-            {
-                ViewBag.emptyPassword = 1;
+                NpgsqlConnection conn1 = Database.Database.GetConnection();
+
+                NpgsqlDataReader reader1 = Database.Database.ExecuteQuery(String.Format("select first_name, last_name, email, phone" +
+                    ", office_address, technology,language from professor as p join users as u on p.professor=u.username" +
+                    " where professor='{0}'", professorName), conn1);
+
+                if (reader1.Read())
+                {
+                    model.FirstName = reader1.GetString(0);
+                    model.LastName = reader1.GetString(1);
+                    model.Email = reader1.GetString(2);
+                    model.Phone = reader1.GetDecimal(3).ToString();
+                    model.OfficeAddress = reader1.GetString(4);
+                    model.Technology = reader1.GetString(5);
+                    model.Language = reader1.GetString(6);
+                    model.Username = professorName;
+                }
+
+                ViewBag.failure = 1;
+                ViewBag.Username = professorName;
+                return View("Profile", model);
             }
             else
             {
-                if (newPassword != newPassword1)
+                string hash = "";
+                byte[] salt = new byte[64];
+
+                NpgsqlConnection conn = Database.Database.GetConnection();
+                NpgsqlDataReader reader = Database.Database.ExecuteQuery(String.Format("select username, password, salt " +
+                                                            "from users where username='{0}'", professorName), conn);
+                while (reader.Read())
                 {
-                    ViewBag.notSamePasswords = 1;
+                    hash = reader.GetString(1);
+                    reader.GetBytes(2, 0, salt, 0, 64);
+                }
+                conn.Close();
+
+                if (!Database.Database.VerifyPassword(profileModel.Password, hash, salt))
+                {
+                    ViewBag.wrongPassword = 1;
                 }
                 else
                 {
-                    int result = Database.Database.ExecuteUpdate(String.Format("update users set password='{0}'" +
-                        " where username='{1}'", Database.Database.HashPasword(newPassword.Trim(), out var newSalt), professorName), conn);
-                    conn.Close();
-
-                    int saltResult = Database.Database.ExecuteUpdate(String.Format("update users set salt=@salt " +
-                        " where username='{0}'", professorName), conn, newSalt);
-
-                    if (result == 1 && saltResult == 1)
+                    if (profileModel.NewPassword != profileModel.NewPassword1)
                     {
-                        ViewBag.success = 1;
+                        ViewBag.notSamePasswords = 1;
                     }
                     else
                     {
-                        ViewBag.failure = 1;
+                        int result = Database.Database.ExecuteUpdate(String.Format("update users set password='{0}'" +
+                            " where username='{1}'", Database.Database.HashPasword(profileModel.NewPassword.Trim(), out var newSalt), professorName), conn);
+                        conn.Close();
+
+                        int saltResult = Database.Database.ExecuteUpdate(String.Format("update users set salt=@salt " +
+                            " where username='{0}'", professorName), conn, newSalt);
+
+                        if (result == 1 && saltResult == 1)
+                        {
+                            ViewBag.success = 1;
+                        }
+                        else
+                        {
+                            ViewBag.failure = 1;
+                        }
                     }
                 }
+                conn.Close();
+
+                ProfessorProfileModel model = new();
+
+                NpgsqlConnection conn1 = Database.Database.GetConnection();
+
+                NpgsqlDataReader reader1 = Database.Database.ExecuteQuery(String.Format("select first_name, last_name, email, phone" +
+                    ", office_address, technology,language from professor as p join users as u on p.professor=u.username" +
+                    " where professor='{0}'", professorName), conn1);
+
+                if (reader1.Read())
+                {
+                    model.FirstName = reader1.GetString(0);
+                    model.LastName = reader1.GetString(1);
+                    model.Email = reader1.GetString(2);
+                    model.Phone = reader1.GetDecimal(3).ToString();
+                    model.OfficeAddress = reader1.GetString(4);
+                    model.Technology = reader1.GetString(5);
+                    model.Language = reader1.GetString(6);
+                    model.Username = professorName;
+                }
+                ViewBag.Username = professorName;
+                return View("Profile", model);
             }
-            conn.Close();
-
-            ProfessorModel model = new ProfessorModel();
-
-            NpgsqlConnection conn1 = Database.Database.GetConnection();
-
-            NpgsqlDataReader reader1 = Database.Database.ExecuteQuery(String.Format("select first_name, last_name, email, phone" +
-                ", office_address, technology,language from professor as p join users as u on p.professor=u.username" +
-                " where professor='{0}'", professorName), conn1);
-
-            if (reader1.Read())
-            {
-                model.FirstName = reader1.GetString(0);
-                model.LastName = reader1.GetString(1);
-                model.Email = reader1.GetString(2);
-                model.Phone = reader1.GetDecimal(3).ToString();
-                model.OfficeAddress = reader1.GetString(4);
-                model.Technology = reader1.GetString(5);
-                model.Language = reader1.GetString(6);
-                model.Username = professorName;
-            }
-
-            ViewBag.Username = professorName;
-            return View("Profile", model);
         }
 
         //POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult ChangePhone(string phone, string professorName)
+        public IActionResult ChangePhone(ProfessorProfileModel profileModel)
         {
-            if (phone == null)
-            {
-                ViewBag.failure = 1;
-            }
-            else
+            string professorName = profileModel.Username;
+
+            if (ModelState.IsValid && (profileModel.Phone == profileModel.NewPhone))
             {
                 NpgsqlConnection conn = Database.Database.GetConnection();
                 int result = Database.Database.ExecuteUpdate(String.Format("update users set phone='{0}' " +
-                                                        "where username='{1}'", phone, professorName), conn);
+                                                        "where username='{1}'", profileModel.NewPhone, professorName), conn);
                 if (result == 1)
                 {
                     ViewBag.success = 1;
@@ -372,8 +397,12 @@ namespace Software_Engineering_Project.Controllers
                 }
                 conn.Close();
             }
+            else
+            {
+                ViewBag.failure = 1;
+            }
 
-            ProfessorModel model = new ProfessorModel();
+            ProfessorProfileModel model = new();
 
             NpgsqlConnection conn1 = Database.Database.GetConnection();
 
@@ -525,10 +554,17 @@ namespace Software_Engineering_Project.Controllers
 
         public IActionResult FinalGrade(string username, string student, int grade)
         {
-
-            NpgsqlConnection conn = Database.Database.GetConnection();
-            int result = Database.Database.ExecuteUpdate(String.Format("update thesis set grade = {0} where student = '{1}'", grade, student), conn);
-
+            if (Regex.Match(username, @"^\w*$").Success && Regex.Match(student, @"^\w*$").Success && Regex.Match(grade.ToString(), @"^\d{10}$").Success)
+            {
+                NpgsqlConnection conn = Database.Database.GetConnection();
+                int result = Database.Database.ExecuteUpdate(String.Format("update thesis set grade = {0} where student = '{1}'", grade, student), conn);
+            }
+            else
+            {
+                ViewBag.failure = 1;
+                ViewBag.Username = username;
+                return View("Grade");
+            }
             ViewBag.Username = username;
             return View("StudentHandler");
         }

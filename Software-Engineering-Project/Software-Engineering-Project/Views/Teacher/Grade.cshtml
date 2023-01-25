@@ -96,6 +96,15 @@
     </div>
     </div>
 
+
+@if (ViewBag.Fail != null && ViewBag.failure == 1)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            alert('Something went wrong please try again');
+        }
+    </script>
+}
     
 
     

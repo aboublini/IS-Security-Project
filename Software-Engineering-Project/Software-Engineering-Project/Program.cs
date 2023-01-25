@@ -14,7 +14,12 @@ builder.Services.Configure<KestrelServerOptions>(options =>
 });
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddViewOptions(options =>
+{
+    options.HtmlHelperOptions.ClientValidationEnabled = false;
+}); 
+
+
 builder.Services.AddAuthentication(
         CertificateAuthenticationDefaults.AuthenticationScheme)
     .AddCertificate(options =>
@@ -36,7 +41,6 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 builder.Services.AddAuthorization();
 
-//builder.Services.AddScoped<IAuthorizationHandler, RolesAuthorizationHandler>();
 
 var app = builder.Build();
 

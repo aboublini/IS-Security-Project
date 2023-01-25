@@ -1,4 +1,4 @@
-﻿@model Software_Engineering_Project.Models.StudentModel
+﻿@model Software_Engineering_Project.Models.StudentProfileModel
 
 @{
     ViewData["Title"] = "Profile";
@@ -92,10 +92,10 @@
         </div> 
         <div>
             
-            <input type="password" placeholder="Old Password" name="oldPassword" class="inpt"/> 
-            <input type="password" placeholder="New Password" name="newPassword" class="inpt"/> 
-            <input type="password" placeholder="Confirm new Password" name="newPassword1" class="inpt"/> 
-            <input type="hidden" name="Username" value="@ViewBag.Username" />
+            <input type="password" placeholder="Old Password" asp-for="Password" class="inpt"/> 
+            <input type="password" placeholder="New Password" asp-for="NewPassword" class="inpt"/> 
+            <input type="password" placeholder="Confirm new Password" asp-for="NewPassword1" class="inpt"/> 
+            <input type="hidden" asp-for="Username" value="@ViewBag.Username" />
             <input class="submit" type="submit"/>
         </div>
     </form>
@@ -108,9 +108,9 @@
         <p class="explanation">Change phone number</p>
     </div> 
     <div>
-         <input placeholder="New phone number" type="tel" pattern="[0-9]{10}" name="phone" class="inpt"/>
-         <input type="tel" pattern="[0-9]{10}" name="phone" placeholder="Confirm Phone Number" class="inpt"/> 
-        <input type="hidden"  name="Username" value="@ViewBag.Username" />
+         <input placeholder="New phone number" type="tel" pattern="[0-9]{10}" asp-for="Phone" class="inpt"/>
+         <input type="tel" pattern="[0-9]{10}" asp-for="NewPhone" placeholder="Confirm Phone Number" class="inpt"/> 
+        <input type="hidden"  asp-for="Username" value="@ViewBag.Username" />
         <input class="submit" type="SUBMIT" />
     </div>
 </form></div>  

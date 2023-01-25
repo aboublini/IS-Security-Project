@@ -26,6 +26,11 @@ namespace Software_Engineering_Project.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Login(LoginModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                model.IsLoginConfirmed = false;
+                return View("Login", model);
+            }
             string username = model.Username;
             string password = model.Password;
 
@@ -96,7 +101,7 @@ namespace Software_Engineering_Project.Controllers
                             }
                             else
                             {
-                                return View("~/Views/Student/SetPassword.cshtml", model.Username);
+                                return View("~/Views/Student/SetPassword.cshtml", new StudentProfileModel());
                             }
                         }
                        

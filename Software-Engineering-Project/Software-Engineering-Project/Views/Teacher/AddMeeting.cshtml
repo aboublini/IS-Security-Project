@@ -39,7 +39,7 @@
 <div class="view">
 <div class="md">
     <div class="add">
-        <form asp-controller="Teacher" asp-action="AddMeeting" asp-route-proffesorName="@ViewBag.Username">
+        <form asp-controller="Teacher" asp-action="AddMeeting" asp-route-proffesorName="@ViewBag.Username" novalidate="false">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div><!--Used on the server side if the user has not entered correctly all the details-->
            
             <h2 class="title">Schedule Appointment</h2>

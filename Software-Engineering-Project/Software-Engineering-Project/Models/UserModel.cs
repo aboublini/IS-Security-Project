@@ -5,30 +5,35 @@ namespace Software_Engineering_Project.Models
     public class UserModel
     {
         [Required]
-        public string Username { get; set; }
+        [RegularExpression(@"\w*")]
+        public string? Username { get; set; }
 
         [Required]
-        [MinLength(6, ErrorMessage = "Password must contain at least 6 characters.")]
-        public string Password { get; set; }
+        //Password must contain at least one uppercase letter, one lowercase letter, one number and one special character
+        [RegularExpression(@"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$")]
+        public string? Password { get; set; }
 
         [Required]
-        public string FirstName { get; set; }
+        [RegularExpression(@"([a-z]|[A-Z]|-)*")]
+        public string? FirstName { get; set; }
 
         [Required]
-        public string LastName { get; set; }
+        [RegularExpression(@"([a-z]|[A-Z]|-)*")]
+        public string? LastName { get; set; }
 
         [Required]
         [RegularExpression(@"male|female|other", ErrorMessage = "Please enter 'male' , 'female' or 'other'.")]
-        public string Gender { get; set; }
+        public string? Gender { get; set; }
 
         [Required]
         [EmailAddress]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Required]
-        [RegularExpression(@"^([0-9]{10})$", ErrorMessage = "Invalid Phone Number.")]
-        public string Phone { get; set; }
+        [RegularExpression(@"^([0-9]{10})", ErrorMessage = "Invalid Phone Number.")]
+        public string? Phone { get; set; }
 
+        [RegularExpression(@"student|professor")]
         public string? Role { get; set; } = "student";
     }
 }
