@@ -162,7 +162,14 @@ namespace Software_Engineering_Project.Controllers
 
     public IActionResult StudentSearch(string queryString, string professorName)
         {
-            if(queryString == null)
+            if (queryString == null)
+            {
+                ViewBag.Fail = true;
+                ViewBag.Username = professorName;
+                return View("StudentHandler");
+            }
+
+            if(!(Regex.Match(professorName, @"^\w*$").Success && Regex.Match(queryString, @"^(?=.*?\s)\w*$").Success))
             {
                 ViewBag.Fail = true;
                 ViewBag.Username = professorName;

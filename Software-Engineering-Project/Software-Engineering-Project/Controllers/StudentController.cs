@@ -345,7 +345,7 @@ namespace Software_Engineering_Project.Controllers
         //POST
         public IActionResult SearchMeeting(string selected_month, string selected_day, string Username)
         {
-            List<MeetingModel> meetingModels = new List<MeetingModel>();
+            List<MeetingModel> meetingModels = new();
 
             NpgsqlConnection conn = Database.Database.GetConnection();
 
