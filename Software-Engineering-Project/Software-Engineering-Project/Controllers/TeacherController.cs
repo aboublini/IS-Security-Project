@@ -169,7 +169,7 @@ namespace Software_Engineering_Project.Controllers
                 return View("StudentHandler");
             }
 
-            if(!(Regex.Match(professorName, @"^\w*$").Success && Regex.Match(queryString, @"^(?=.*?\s)\w*$").Success))
+            if(!(Regex.Match(professorName, @"^\w*$").Success || Regex.Match(queryString, @"^(?=.*?\s)\w*$").Success))
             {
                 ViewBag.Fail = true;
                 ViewBag.Username = professorName;

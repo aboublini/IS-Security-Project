@@ -5,13 +5,13 @@ namespace Software_Engineering_Project.Models
     public class ThesisModel : StudentModel
     {
         [Required]
-        [RegularExpression(@"\w*")]
+        [RegularExpression(@"(\w|\s)*")]
         public string? Title { get; set; }
 
         [Required]
         public DateOnly ThesisStartDate { get; set; }
 
-        [Required]
+        
         [Range(0, 10)]
         public int? Grade { get; set; }
 
@@ -20,7 +20,7 @@ namespace Software_Engineering_Project.Models
         public string? Language { get; set; }
 
         [Required]
-        [RegularExpression(@"\w*")]
+        [RegularExpression(@"(\w|\s)*")]
         public string? Technology { get; set; }
 
         public IFormFile? File { get; set; }
